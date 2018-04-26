@@ -1,0 +1,98 @@
+.editarIcon,
+.borrarIcon {
+    cursor: pointer;
+}
+
+#botonEditar {
+    margin-left: 150px;
+}
+
+#tableData {
+    width: 85%;
+    margin-left: 9%;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-family: -webkit-body;
+}
+
+.buscar {
+    width: 20% !important;
+}
+
+#BotonBuscar {
+    margin-left: 15%;
+}
+
+#InsertDato {
+    float: right;
+}
+
+#insertIcon {
+    cursor: pointer;
+    position: fixed;
+    margin-left: 93%;
+}
+
+form {
+    width: 30%;
+    height: auto;
+    border: 1px solid #6c84c7;
+    margin: 20px;
+    padding: 20PX;
+    margin-left: 2%;
+    margin-top: 9%;
+    background: #e0e6ea54;
+    padding-top: -9%;
+    margin-top: -32%;
+}
+
+img {
+    width: 100%;
+}
+
+label {
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    font-weight: bold;
+}
+
+input,
+button {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    /*para que el input no se salga del margin*/
+    border: 1px solid #ccc;
+    background: #e4e1e8;
+}
+
+input:focus {
+    border: 1px solid #1668c4;
+}
+
+button[type="submit"] {
+    margin-bottom: 0px;
+    background: #1668c4;
+    color: #fff;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background: #578fcf;
+    cursor: pointer;
+}
+
+.selec {
+    height: 36px;
+    margin-top: 10px;
+    width: 90px;
+}
+
+select:hover {
+    cursor: pointer;
+}
