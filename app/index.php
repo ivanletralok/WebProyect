@@ -18,8 +18,9 @@
 <body>
 
     <nav>
-        <span id="nameUser">nombre</span>
-        <span class="cerrarS"> Cerrar S</span>
+
+        <span style="font-size: 20px; margin-left: 10px;" id="nameUser"></span>
+        <span class="cerrarS" style="font-size: 20px;"> Cerrar Sesión &#128274;</span>
     </nav>
 
     <span class="title">
@@ -190,6 +191,6 @@
     if(user != undefined)
     {
         user = $.parseJSON(user);
-        $("#nameUser").html(user.nombre1 + ' ' + user.apellido1);
+        $("#nameUser").html('&#x1F464; ' + user.nombre1 + ' ' + user.apellido1);
     }
 </script>

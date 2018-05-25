@@ -29,12 +29,12 @@ nav{
 
 .title {
     text-align: center;
-    font-size: 30px;
-    font-family: -webkit-body;
+    font-family: arial;
 }
 
 .buscar {
     width: 20% !important;
+    margin-left: 110px;
 }
 
 #BotonBuscar {
@@ -150,7 +150,7 @@ table.highlight {
 
 .nav2:hover{
     background-color: #dce9ef96;
-    
+
 }
 
 .candidat{
