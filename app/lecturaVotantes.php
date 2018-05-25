@@ -19,6 +19,7 @@
                     <th>PRIMER APELLIDO</th>
                     <th>SEGUNDO APELLIDO</th>
                     <th>ESTADO </th>
+                    <th>correo </th>
                     <th>ACCIONES</th>
                     </tr>';
                 
@@ -31,6 +32,7 @@
                         <td id="apellido1">'.$us['apellido1'].'</td>
                         <td id="apellido2">'.$us['apellido2'].'</td>
                         <td id="estado">'.$us['nombre'].'</td>
+                        <td id="estado">'.$us['correo_electronico'].'</td>
                         <td>
             <a class="modal-trigger" href="#modal2"><i class="material-icons accionesIcons editarIcon ">create</i></a>
             <i class="material-icons accionesIcons borrarIcon">delete</i>
