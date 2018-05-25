@@ -1,0 +1,53 @@
+
+#certificado{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#escudo_unimag{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+#escudo_unimag>img{
+  width: 100px;
+  height: 100px;
+}
+
+#botones{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.datos{
+  text-align: center;
+  font-size: 20px;
+}
+
+.certif_btn{
+   width: 190px;
+   height: 50px;
+   background-color: #1D1363;
+   color: white;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.certif_btn:hover{
+  opacity: 0.8;
+}
+
+.certif_btn:active{
+  transform: scale(0.98);
+}
