@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Css/estilo.css">
     <!-- Compiled and minified CSS -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <link rel="stylesheet" href="Css/estilo.css">
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <title>Votantes</title>
@@ -16,6 +17,10 @@
 
 <body>
 
+    <nav>
+        <span id="nameUser">nombre</span>
+        <span class="cerrarS"> Cerrar S</span>
+    </nav>
 
     <span class="title">
         <center>
@@ -49,11 +54,7 @@
             <h4>Editar</h4>
 
             <div class="row">
-                <div class="input-field col s4">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" name="codigoNuevo" type="text" class="inputData validate">
-                    <label id="codigoLabel" for="icon_prefix" class="active">Codigo</label>
-                </div>
+
 
                 <div class="input-field col s4">
                     <i class="material-icons prefix">account_circle</i>
@@ -84,7 +85,7 @@
                     <input id="icon_prefix" name="estadoNuevo" type="text" class="inputData validate">
                     <label id="estadoNuevoLabel" for="icon_prefix" class="active">Estado</label>
                 </div>
-                
+
                 <div class="input-field col s4">
                     <input id="icon_prefix" name="idDB" type="hidden" class="inputData validate">
                     <button type="submit" id="botonEditar" href="#!" class="waves-effect waves-light btn modal-action modal-close waves-effect waves-green btn-flat">Actualizar</button>
@@ -137,11 +138,32 @@
                 </div>
 
 
+
+                <div class="input-field col s4">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="" type="text" class="inputInsert" name="TipoUsuario">
+                    <label for="">Tipo de Usuario</label>
+                </div>
+
+
                 <div class="input-field col s4">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="" type="text" class="inputInsert" name="estado">
                     <label for="">Estado</label>
                 </div>
+
+                <div class="input-field col s4">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="" type="text" class="inputInsert" name="id_programa">
+                    <label for=""> Id_Programa </label>
+                </div>
+
+                <div class="input-field col s4">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="" type="text" class="inputInsert" name="id_Mesa">
+                    <label for=""> Id_Mesa </label>
+                </div>
+
 
                 <div class="input-field col s4">
                     <i class="material-icons prefix">account_circle</i>
@@ -161,4 +183,13 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-<script src="js/evento.js"></script>
+<script src="js/event.js"></script>
+
+<script>
+    let user = window.localStorage.getItem('user');
+    if(user != undefined)
+    {
+        user = $.parseJSON(user);
+        $("#nameUser").html(user.nombre1 + ' ' + user.apellido1);
+    }
+</script>

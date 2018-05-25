@@ -8,6 +8,5 @@
 
     $resultado = usuario::where('codigo','=',$codigo)->get();
 
-    d($resultado);
        
 

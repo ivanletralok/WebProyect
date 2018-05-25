@@ -5,7 +5,7 @@
 
     $id = $_POST['idEliminar'];
 
-   $resultado = usuario::where('id','=',$id)->delete();
+   $resultado = usuario::where('codigo','=',$id)->delete();
 
    if($resultado) echo 'Eliminado';
    else echo 'error';

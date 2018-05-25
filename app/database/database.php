@@ -6,7 +6,7 @@
      $database->addConnection([
         'driver' => 'mysql',
         'host' => 'localhost',
-        'database' => 'Elecciones',
+        'database' => 'votaciones',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',

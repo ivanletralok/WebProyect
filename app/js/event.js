@@ -1,3 +1,8 @@
+if (window.localStorage.getItem('user') == undefined) {
+  window.location.href = './login/login.php';
+}
+
+
 $('.modal').modal();
 
 function updateTable(){
@@ -19,7 +24,6 @@ $(document).on('click', '.editarIcon', function () {
 
   $('#modal2').modal('open');
 
-  $('#codigoLabel').addClass('active')
   $('#primernombreNuevoLabel').addClass('active')
   $('#segundonombreNuevoLabel').addClass('active')
   $('#primerapellidoNuevoLabel').addClass('active')
@@ -27,7 +31,6 @@ $(document).on('click', '.editarIcon', function () {
   $('#estadoNuevoLabel').addClass('active')
 
   /* closest = buscar  find = mas cercano */
-  var pk7  = $(this).closest('tr').find('#codigos').html();
   var pk1 = $(this).closest('tr').find('#nombre1').html();
   var pk2 = $(this).closest('tr').find('#nombre2').html();
   var pk3 = $(this).closest('tr').find('#apellido1').html();
@@ -36,7 +39,6 @@ $(document).on('click', '.editarIcon', function () {
   var pk6 = $(this).closest('tr').find('#idColumn').html();
 
   
-  $('input[name="codigoNuevo"]').val(pk7);
   $('input[name="primernombreNuevo"]').val(pk1);
   $('input[name="segundonombreNuevo"]').val(pk2);
   $('input[name="primerapellidoNuevo"]').val(pk3);
@@ -47,7 +49,6 @@ $(document).on('click', '.editarIcon', function () {
 
 $(document).on('click', '#botonEditar', function () {
 
-  var codigoNuevo = $('input[name="codigoNuevo"]').val();
   var primernombreNuevo = $('input[name="primernombreNuevo"]').val();
   var segundonombreNuevo = $('input[name="segundonombreNuevo"]').val();
   var primerapellidoNuevo = $('input[name="primerapellidoNuevo"]').val();
@@ -57,7 +58,6 @@ $(document).on('click', '#botonEditar', function () {
 
   var dataToSend = {
 
-    codigoNuevo:codigoNuevo,
     primernombreNuevo:primernombreNuevo,
     segundonombreNuevo:segundonombreNuevo,
     primerapellidoNuevo:primerapellidoNuevo,
@@ -133,7 +133,10 @@ $(document).on('click', '#InsertDato', function () {
   var pass = $('input[name="pass"]').val();
   var estado =  $('input[name="estado"]').val();
   var Rol =  $('input[name="Rol"]').val();
-
+  var TipoUsuario= $('input[name="TipoUsuario"]').val();
+  var id_programa = $('input[name="id_programa"]').val();
+  var id_Mesa = $('input[name="id_Mesa"]').val();
+  
   var dataToSend = {
     codigo:codigo,
     primerNom:primerNom,
@@ -143,6 +146,9 @@ $(document).on('click', '#InsertDato', function () {
     pass:pass,
     estado:estado,
     Rol: Rol,
+    TipoUsuario:TipoUsuario,
+    id_programa:id_programa,
+    id_Mesa:id_Mesa,
   }
 
   $.ajax({
@@ -160,6 +166,10 @@ $(document).on('click', '#InsertDato', function () {
       var pass = $('input[name="pass"]').val("");
       var estado =  $('input[name="estado"]').val("");
       var Rol =  $('input[name="Rol"]').val("");
+      var candidato = $('input[name="candidato"]').val("");
+      var TipoUsuario = $('input[name="TipoUsuario"]').val("");
+      var id_programa = $('input[name="id_programa"]').val("");
+      var id_Mesa = $('input[name="id_Mesa"]').val("");
       swal("Guarado con exito", "", "success");
       
     }
@@ -182,10 +192,11 @@ function searchInput() {
   var input, filter, table, tr, td, i;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
-  table = document.getElementById("tableData");
+  table = document.getElementById("tabless");
+  console.log(table)
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[1];
+      td = tr[i].getElementsByTagName("td")[0];
       if (td) {
           if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
               tr[i].style.display = "";
@@ -201,5 +212,13 @@ function searchInput() {
     searchInput();
   })
 
+
+
+  //CERRAR sessionStorage 
+
+  $(document).on('click','.cerrarS',function(){
+    window.localStorage.removeItem('user');
+    window.location.href= "../app/login/login.php";
+  })
 
 

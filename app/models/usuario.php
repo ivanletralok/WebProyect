@@ -5,6 +5,8 @@
     class Usuario extends Model{
         protected $table = 'usuario';
 
+        public $timestamps = false;
+
         protected $fillable = [
             
             'codigo',
@@ -12,9 +14,13 @@
             'nombre2',
             'apellido1',
             'apellido2',
-            'Rol_idrol',
-            'estado',
             'password',
+            'id_tipo_usuario',
+            'id_rol',
+            'id_programa',
+            'id_mesa',
+            'id_estado_usuario',
+            'candidatos_id',
            
         ];
     }   

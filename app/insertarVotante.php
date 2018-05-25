@@ -11,7 +11,13 @@
     $apellido2 = $_POST['segudoAPell'];
     $estado = $_POST['estado'];
     $password = $_POST['pass'];
+    $tipoUsuario = $_POST['TipoUsuario'];
     $Rol = $_POST['Rol'];
+    $id_programa = $_POST['id_programa'];
+    $id_mesa = $_POST['id_Mesa'];
+
+
+
 
 
 
@@ -22,11 +28,11 @@ usuario::create([
     'nombre2' => $nombre2,
     'apellido1' => $apellido1,
     'apellido2' => $apellido2,
-    'estado' => $estado ,
     'password' => $password,
-    'Rol_idrol' => $Rol
-
-    
-
+    'id_tipo_usuario'=>$tipoUsuario,
+    'id_rol' => $Rol,
+    'id_programa'=> $id_programa,
+    'id_mesa'=> $id_mesa,
+    'id_estado_usuario'=> $estado,
 ]);
 

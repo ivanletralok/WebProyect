@@ -20,20 +20,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Login</title>
 
-    <body>
+    <body> 
+
         <div>
             <img src="../img/Elecciones-Cienaga-1024x559.jpg" alt="">
         </div>
-        <form class="formLogin" action="" method = "POST">
+        <form  id ="formLogin">
             <label for=""> Nombre :
-                <input type="number" name="userName" placeholder="codigo" class="us">
+                <input id="user" type="number" value="123456" name="userName" placeholder="codigo" class="us">
             </label>
             <label for=""> Contraseña
-                <input type="password" name="password" placeholder="password" class="pass">
+                <input id="pass"  value="123456" type="password" name="password" placeholder="password" class="pass">
             </label>
-            <button class="btn loginButton" type="submit">Login</button>
-
-
+            <button id="login" class="btn loginButton" type="submit">Login</button>
         </form>
 
 

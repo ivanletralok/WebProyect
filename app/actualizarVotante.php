@@ -4,7 +4,6 @@
     require_once 'models/usuario.php';
     require_once 'database/database.php';
 
-   $codigoNuevo = $_POST['codigoNuevo'];
    $primernombreNuevo = $_POST['primernombreNuevo'];
    $segundonombreNuevo = $_POST['segundonombreNuevo'];
    $primerapellidoNuevo = $_POST['primerapellidoNuevo'];
@@ -13,10 +12,16 @@
    $idDB = $_POST['idDB'];
 
 
-   $resultado = usuario::where('id','=',$idDB)->update(['codigo'=>$codigoNuevo,'nombre1'=> $primernombreNuevo,'nombre2'=> $segundonombreNuevo,'apellido1'=> $primerapellidoNuevo,'apellido2'=> $segundoapellidoNuevo,'estado'=> $estadoNuevo]);
+   $resultado = usuario::where('codigo','=',$idDB);
+   
+   $resultado->update(['nombre1'=> $primernombreNuevo,
+                                                            'nombre2'=> $segundonombreNuevo,
+                                                            'apellido1'=> $primerapellidoNuevo,
+                                                            'apellido2'=> $segundoapellidoNuevo,
+                                                            'id_estado_usuario'=> $estadoNuevo]);
 
    if($resultado) echo 'actualizado';
-   else echo 'error';
+   else var_dump($resultado);
 
   
 

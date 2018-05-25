@@ -1,16 +1,31 @@
+.cerrarS{
+    cursor: pointer;
+    cursor: pointer;
+    float: right !important;
+    margin-right: 50px;
+}
+
+nav{
+    background: cadetblue !important;
+}
+
+
 .editarIcon,
 .borrarIcon {
     cursor: pointer;
 }
+
 
 #botonEditar {
     margin-left: 150px;
 }
 
 #tableData {
-    width: 85%;
-    margin-left: 9%;
+    width: 98%;
+    margin-left: 2%;
 }
+
+
 
 .title {
     text-align: center;
@@ -95,4 +110,58 @@ button[type="submit"]:hover {
 
 select:hover {
     cursor: pointer;
+}
+
+
+
+
+table.highlight {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.nav{
+    border: 1px solid black;
+    width: 80%;
+    height: 53px;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+
+.title{
+    text-align: center;
+}
+
+.nav2{
+    width: 22%;
+    height: 50px;
+    display: inline-flex;
+    margin: 0px;
+    border-radius: 10px;
+    padding-left: 5px;
+    font-family: serif;
+    font-size: 21px;
+    padding-left: 23px;
+    padding-top: 14px;
+    margin-left: 6px;
+    cursor: pointer;
+
+}
+
+.nav2:hover{
+    background-color: #dce9ef96;
+    
+}
+
+.candidat{
+
+    border: 1px solid black;
+    height: 157px;
+    width: 32%;
+    display: inline-flex;
+}
+
+.candidatoSeleccionado{
+    box-shadow: 0px 0px 30px 5px black;
+    transform: scale(1.1);
 }
