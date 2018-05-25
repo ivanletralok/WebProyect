@@ -19,8 +19,8 @@
                     <th>PRIMER APELLIDO</th>
                     <th>SEGUNDO APELLIDO</th>
                     <th>ESTADO </th>
-                    <th>ESTADO </th>
                     <th>NUMERO DE MESA</th>
+                    <th>ACCIONES</th>
                     </tr>';
                 
 
@@ -31,12 +31,12 @@
                         <td id="nombre2">'.$us['nombre2'].'</td>
                         <td id="apellido1">'.$us['apellido1'].'</td>
                         <td id="apellido2">'.$us['apellido2'].'</td>
-                        <td id="estado">'.$us['id_estado_usuario'].'</td>
                         <td id="estado">'.$us['nombre'].'</td>
-                        <td id="mesa">'.$us['id_mesa'].'</td>
+                        <td id="estado">'.$us['id_mesa'].'</td>
                         <td>
-                        <a class="modal-trigger" href="#modal2"><i class="material-icons accionesIcons editarIcon ">create</i></a>
-          
+                        
+            <a class="modal-trigger" href="#modal2"><i class="material-icons accionesIcons editarIcon ">create</i></a>
+            <i class="material-icons accionesIcons borrarIcon">delete</i>
             
             </td>
                     </tr>';

@@ -24,48 +24,31 @@ $(document).on('click', '.editarIcon', function () {
 
   $('#modal2').modal('open');
 
-  $('#primernombreNuevoLabel').addClass('active')
-  $('#segundonombreNuevoLabel').addClass('active')
-  $('#primerapellidoNuevoLabel').addClass('active')
-  $('#segundoapellidoNuevoLabel').addClass('active')
+
   $('#estadoNuevoLabel').addClass('active')
 
   /* closest = buscar  find = mas cercano */
-  var pk1 = $(this).closest('tr').find('#nombre1').html();
-  var pk2 = $(this).closest('tr').find('#nombre2').html();
-  var pk3 = $(this).closest('tr').find('#apellido1').html();
-  var pk4 = $(this).closest('tr').find('#apellido2').html();
+  
   var pk5 = $(this).closest('tr').find('#estado').html();
   var pk6 = $(this).closest('tr').find('#idColumn').html();
 
-  
-  $('input[name="primernombreNuevo"]').val(pk1);
-  $('input[name="segundonombreNuevo"]').val(pk2);
-  $('input[name="primerapellidoNuevo"]').val(pk3);
-  $('input[name="segundoapellidoNuevo"]').val(pk4);
+ 
   $('input[name="estadoNuevo"]').val(pk5);
   $('input[name="idDB"]').val(pk6);
 })
 
 $(document).on('click', '#botonEditar', function () {
 
-  var primernombreNuevo = $('input[name="primernombreNuevo"]').val();
-  var segundonombreNuevo = $('input[name="segundonombreNuevo"]').val();
-  var primerapellidoNuevo = $('input[name="primerapellidoNuevo"]').val();
-  var segundoapellidoNuevo = $('input[name="segundoapellidoNuevo"]').val();
+  
   var estadoNuevo = $('input[name="estadoNuevo"]').val();
   var idDB =  $('input[name="idDB"]').val();
 
   var dataToSend = {
 
-    primernombreNuevo:primernombreNuevo,
-    segundonombreNuevo:segundonombreNuevo,
-    primerapellidoNuevo:primerapellidoNuevo,
-    segundoapellidoNuevo:segundoapellidoNuevo,
     estadoNuevo:estadoNuevo,
     idDB:idDB,
   }
-
+console.log(dataToSend)
   $.ajax({
     method: 'POST',
     url: '../app/actualizarVotante.php',
@@ -220,5 +203,22 @@ function searchInput() {
     window.localStorage.removeItem('user');
     window.location.href= "../app/login/login.php";
   })
+
+
+  // $(document).on('click','#estado5',function(){
+   
+  //   let suma = 0;
+  //   console.log(suma)
+
+  //   $.ajax({
+  //    method: 'POST',
+  //    url: '../app/actualizarVotante.php',
+  //    data: {suma:suma},
+  //    success : function(){
+  //      updateTable();
+  //    }
+  //  })
+   
+  // })
 
 

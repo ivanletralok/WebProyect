@@ -40,9 +40,10 @@
     </div>
 
 
-    <a id="insertIcon" class="btn-floating btn-large waves-effect waves-light blue">
+    <!-- <a id="insertIcon" class="btn-floating btn-large waves-effect waves-light blue">
         <i class="material-icons">add</i>
-    </a>
+    </a> -->
+    
 
     <div id="tableData">
 
@@ -56,7 +57,7 @@
             <div class="row">
 
 
-                <div class="input-field col s4">
+                <!-- <div class="input-field col s4">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="icon_prefix" name="primernombreNuevo" type="text" class="inputData validate">
                     <label id="primernombreNuevoLabel" for="icon_prefix" class="active">Primer nombre</label>
@@ -78,7 +79,7 @@
                     <i class="material-icons prefix">account_circle</i>
                     <input id="icon_prefix" name="segundoapellidoNuevo" type="text" class="inputData validate">
                     <label id="segundoapellidoNuevoLabel" for="icon_prefix" class="active">Segundo Apellido</label>
-                </div>
+                </div> -->
 
                 <div class="input-field col s4">
                     <i class="material-icons prefix">account_circle</i>
