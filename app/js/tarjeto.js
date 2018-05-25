@@ -4,7 +4,9 @@ $(document).ready(function () {
   var cantidad = 0;
   $('.modal').modal();
 
-  var mesa = 100;
+  var usuario = $.parseJSON(window.localStorage.getItem('user'));
+
+  var mesa = usuario.id_mesa;
   var seleccionar = false;
   var selecc;
 
@@ -182,7 +184,7 @@ function correo() {
   //   });
   let mensaje = $("#certificado");
   mensaje.append(`<h3>Fecha ${fecha}</h3>`);
-  $.post('correo.php', {mensaje:mensaje.prop('outerHTML')}, function(data){
+  $.post('correo.php', {mensaje:mensaje.prop('outerHTML'),correo:usuario.correo_electronico }, function(data){
     if(data[data.length-1]==1){
       swal("certificado  enviado");
     }else{
