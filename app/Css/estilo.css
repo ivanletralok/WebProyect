@@ -29,12 +29,12 @@ nav{
 
 .title {
     text-align: center;
-    font-size: 30px;
-    font-family: -webkit-body;
+    font-family: arial;
 }
 
 .buscar {
     width: 20% !important;
+    margin-left: 110px;
 }
 
 #BotonBuscar {
@@ -150,7 +150,7 @@ table.highlight {
 
 .nav2:hover{
     background-color: #dce9ef96;
-    
+
 }
 
 .candidat{
@@ -165,7 +165,10 @@ table.highlight {
     box-shadow: 0px 0px 30px 5px black;
     transform: scale(1.1);
 }
+<<<<<<< HEAD
 
 #estado5{
     cursor: pointer;
 }
+=======
+>>>>>>> 6f456b803a938d34802ad31a41ff7f3f1ad8b0e3
