@@ -11,10 +11,10 @@ require '../vendor/autoload.php';
 $email_user = "ivanletralok@gmail.com";
 $email_password = "alexyque";
 $the_subject = "Phpmailer prueba by Evilnapsis.com";
-$address_to = "joralmopro@gmail.com";
+$address_to = $_POST['correo'];
 $from_name = "Votaciones Unimagdalena";
 $mensaje = $_POST['mensaje'];
-$correo = $_POST['correo'];
+
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {

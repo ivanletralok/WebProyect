@@ -203,6 +203,7 @@ function imprimir() {
 
 function certificado() {
   let usuario = $.parseJSON(window.localStorage.getItem('user'));
+  console.log(usuario);   
   let cedula = $("#cedula");
   let nombre = $("#nombre");
   let apellido = $("#apellido");

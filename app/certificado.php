@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="Css/certifistyle.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <title>Tarjeton</title>
+    <title>certificado</title>
 </head>
 
 <body onload="certificado()">
@@ -22,14 +22,12 @@
         <div class="datos"> <p>Nombre: <span id="nombre"></span></p> </div>
         <div class="datos"><p>Apellido: <span id="apellido"></span></p></div>
         <div class="datos"> <p>Numero de mesa: <span id="mesa"></span></p></div>
-        <div id="botones">
+    </div>
+
+    <div id="botones">
           <button class="certif_btn" id="btnImprimir">Imprimir</button>
           <button class="certif_btn" id="btnCorreo">Enviar al correo</button>
         </div>
-
-    </div>
-    <button id="btnImprimir">Imprimir</button>
-    <button id="btnCorreo">Enviar al correo</button>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
