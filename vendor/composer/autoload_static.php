@@ -22,6 +22,7 @@ class ComposerStaticInita332b26c33b397e51fae6585e40ecc3a
         array (
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Container\\' => 14,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'I' => 
         array (
@@ -33,10 +34,6 @@ class ComposerStaticInita332b26c33b397e51fae6585e40ecc3a
         'D' => 
         array (
             'Doctrine\\Common\\Inflector\\' => 26,
-        ),
-        'C' => 
-        array (
-            'Carbon\\' => 7,
         ),
     );
 
@@ -56,6 +53,10 @@ class ComposerStaticInita332b26c33b397e51fae6585e40ecc3a
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -77,10 +78,10 @@ class ComposerStaticInita332b26c33b397e51fae6585e40ecc3a
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
-        'Carbon\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
+    );
+
+    public static $fallbackDirsPsr4 = array (
+        0 => __DIR__ . '/..' . '/nesbot/carbon/src',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -88,6 +89,7 @@ class ComposerStaticInita332b26c33b397e51fae6585e40ecc3a
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInita332b26c33b397e51fae6585e40ecc3a::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita332b26c33b397e51fae6585e40ecc3a::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInita332b26c33b397e51fae6585e40ecc3a::$fallbackDirsPsr4;
 
         }, null, ClassLoader::class);
     }

@@ -158,28 +158,37 @@ $(document).ready(function () {
 })
 
 function correo() {
-  emailjs.init("user_M1Hieqo8Ks2Ybkqaz0Ned");
+  // emailjs.init("user_M1Hieqo8Ks2Ybkqaz0Ned");
   let usuario = $.parseJSON(window.localStorage.getItem('user'));
-  let idServicio = 'gmail';
-  let idTemplate = 'certificado';
+  // let idServicio = 'gmail';
+  // let idTemplate = 'certificado';
   let fecha = new Date();
   let anio = fecha.getFullYear();
   let mes = fecha.getMonth() + 1;
   let dia = fecha.getDate();
   fecha = anio + "/" + mes + "/" + dia;
-  emailjs.send(idServicio, idTemplate, 
-    {
-      cedula:usuario.codigo,
-      nombre:usuario.nombre1 + " " + usuario.nombre2,
-      apellido:usuario.apellido1 + " " + usuario.apellido2,
-      mesa:usuario.id_mesa,
-      fecha:fecha
-    })
-    .then(function (response) {
-      console.log("Correo enviado");
-    }, function (err) {
-      console.log("Error al enviar correo");
-    });
+  // emailjs.send(idServicio, idTemplate, 
+  //   {
+  //     cedula:usuario.codigo,
+  //     nombre:usuario.nombre1 + " " + usuario.nombre2,
+  //     apellido:usuario.apellido1 + " " + usuario.apellido2,
+  //     mesa:usuario.id_mesa,
+  //     fecha:fecha
+  //   })
+  //   .then(function (response) {
+  //     console.log("Correo enviado");
+  //   }, function (err) {
+  //     console.log("Error al enviar correo");
+  //   });
+  let mensaje = $("#certificado");
+  mensaje.append(`<h3>Fecha ${fecha}</h3>`);
+  $.post('correo.php', {mensaje:mensaje.prop('outerHTML')}, function(data){
+    if(data[data.length-1]==1){
+      swal("certificado  enviado");
+    }else{
+      console.log("error")
+    }
+  });
 }
 
 function imprimir() {

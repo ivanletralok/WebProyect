@@ -6,11 +6,12 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require '../vendor/autoload.php';
 
-$email_user = "JoralmoPro@gmail.com";
-$email_password = "";
+$email_user = "ivanletralok@gmail.com";
+$email_password = "alexyque";
 $the_subject = "Phpmailer prueba by Evilnapsis.com";
-$address_to = "ivanletralok@gmail.com";
-$from_name = "Jose Altamar";
+$address_to = "dicksonceron@gmail.com";
+$from_name = "Votaciones Unimagdalena";
+$mensaje = $_POST['mensaje'];
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
@@ -31,14 +32,14 @@ try {
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->Subject = 'Envio certificado electoral';
+    $mail->Body    = $mensaje;
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     $mail->send();
-    echo 'Message has been sent';
+    echo 1;
 } catch (Exception $e) {
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+    echo 0;
 }
 
 ?>
