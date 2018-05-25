@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 require '../vendor/autoload.php';
 
 $email_user = "JoralmoPro@gmail.com";
-$email_password = "1221967524Joralmo";
+$email_password = "";
 $the_subject = "Phpmailer prueba by Evilnapsis.com";
 $address_to = "ivanletralok@gmail.com";
 $from_name = "Jose Altamar";
