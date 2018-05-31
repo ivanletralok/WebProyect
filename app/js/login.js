@@ -16,13 +16,21 @@ $(document).ready(function(){
         {
           let user = $.parseJSON(data);
           window.localStorage.setItem('user', data);
-          if(user.id_rol == "A")
-          {
-            window.location.href = '../index.php'; 
-          }
+         
           if(user.id_rol == "J")
           {
-            alert('redireccionar vista jurado');
+            window.location.href = '../index.php'; 
+           
+          }
+          else if(user.id_rol == "V")
+          {
+            if(user.id_estado_usuario < 2 ){
+              swal("no autorizado");
+            }
+            if(user.id_estado_usuario >= 2){
+               window.location.href = '../tarjeton.php'; 
+            }
+    
           }
         }else{
           alert('datos incorrectos');
@@ -31,5 +39,7 @@ $(document).ready(function(){
     })
 
   })
+
 })
   
+

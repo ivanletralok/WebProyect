@@ -46,3 +46,6 @@
 .certif_btn:active{
   transform: scale(0.98);
 }
+.imprimir{
+  cursor: pointer;
+}

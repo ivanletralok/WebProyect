@@ -222,3 +222,12 @@ function searchInput() {
   // })
 
 
+  $(document).on('click', '.imprimir', function (e) {
+    e.preventDefault();
+    var esta = $(this).closest('tr').find('#estado').html();
+    $('input[name="estado"]').val(esta);
+    console.log(esta)
+    if(esta == 4){
+      window.location.href = '/illuminate1/app/certificado_jurado.php'
+    }
+  });

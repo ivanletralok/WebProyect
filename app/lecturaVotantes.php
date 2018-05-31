@@ -5,7 +5,8 @@
             require 'models/rol.php';
             /*$us = array('nombre '=>'alex','edad'=>'25');
             d($us);*/
-
+        
+            
             $usuarios = usuario::join('estado_usuario',
             'usuario.id_estado_usuario', '=', 'estado_usuario.id_estado_usuario')
             ->where('usuario.id_rol','=','V')->get();
@@ -36,7 +37,7 @@
                         <td id="mesa">'.$us['id_mesa'].'</td>
                         <td>
                         <a class="modal-trigger" href="#modal2"><i class="material-icons accionesIcons editarIcon ">create</i></a>
-          
+                        <a class="imprimir"><i class="material-icons accionesIcons  ">attach_file</i></a>
             
             </td>
                     </tr>';
