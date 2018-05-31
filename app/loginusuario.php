@@ -11,7 +11,7 @@
       <form class="" action="" method="post">
         <label>Código Estudiantil</label>
         <input style="font-size: 20px" type="text" name="" value="" placeholder="&#x1F4B3;">
-        <button type="button" name="button">INGRESAR</button>
+        <button id="log" type="button" name="button">INGRESAR</button>
       </form>
     </div>
     <div class="container1">
@@ -20,5 +20,8 @@
           <span>6</span>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/loginuser.js"></script>
+
   </body>
 </html>

@@ -11,11 +11,16 @@
     <title>Tarjeton</title>
 </head>
 
-<body>
+<body id="tarjeton">
+  <div class="cabecera">
+    <h2 class="title">Bienvenido al Tarjeton Electoral Unimag 2018</h2>
+  </div>
 
-    <h2 class="title">Tarjetones</h2>
+  <h2>Por favor Elige un candidato por cada órgano</h2>
 
     <div class="nav">
+
+
 
         <!-- primer vaino -->
         <div class="nav2" id="consejoS">Consejo Superior
@@ -98,6 +103,7 @@
         </div>
 
         <!-- Modal Trigger -->
+
 
                 <button id="votar" type="submit" href="#!" class="btn">Votar</button>
 

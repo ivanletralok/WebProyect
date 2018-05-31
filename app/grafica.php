@@ -8,6 +8,8 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
+    <link rel="stylesheet" href="css/graficstyle.css">
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
@@ -18,8 +20,9 @@
 </head>
 
 <body>
-
-    <h1>Estadisiticas Votantes</h1>
+    <div class="cabecera">
+      <h1><img src="https://pse.unimagdalena.edu.co/Content/Imagenes/escudo_unimag_sm.png" alt="escudo unimag">  Estadísticas Votantes</h1>
+    </div>
 
     <?php
     require_once '../vendor/autoload.php';
@@ -31,7 +34,7 @@
 
             $usuarios = usuario::where('usuario.id_estado_usuario','<=',3)->count();
             $us= usuario::where('usuario.id_estado_usuario','=',4)->count();
-           
+
 
         //    print_r($usuarios);
         //    echo '<br></br>';
@@ -43,8 +46,8 @@
                 <div class="col s3"></div>
                 <div class="col center-align ">
                 <canvas id="myChart" width="400" height="400"></canvas>
-                    
-                    
+
+
                 </div>
                 <div class="col s3"></div>
 

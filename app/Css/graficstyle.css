@@ -1,0 +1,34 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #D2DBF2;
+  font-family: arial;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  height: 420px;
+  background-color: white;
+  border: 3px solid;
+}
+
+.cabecera{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  background-color:#3354A0;
+  color: white;
+  margin-bottom: 20px;
+}
+
+img{
+  width: 90px;
+  height: 90px;
+}
