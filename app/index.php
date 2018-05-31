@@ -44,7 +44,7 @@
     <!-- <a id="insertIcon" class="btn-floating btn-large waves-effect waves-light blue">
         <i class="material-icons">add</i>
     </a> -->
-    
+
 
     <div id="tableData">
 
@@ -178,6 +178,10 @@
                 </div>
             </div>
         </div>
+</div>
+
+<button type="button" name="button" id="estadistica">ESTADISTICAS VOTACION</button>
+
 
 </body>
 

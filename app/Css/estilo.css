@@ -18,7 +18,9 @@ nav{
 
 #botonEditar {
     margin-left: 150px;
-
+    width: 220px;
+    height: 40px;
+    background-color: #263033;
 }
 
 #tableData {
@@ -98,7 +100,7 @@ button {
 
 
 .modal-content{
-  background-color: black;
+  background-color: #427982;
 }
 
 input:focus {
@@ -219,4 +221,8 @@ table.highlight {
 }
 .imprimir{
     cursor: pointer;
+}
+
+#estadistica:hover{
+  cursor:pointer;
 }

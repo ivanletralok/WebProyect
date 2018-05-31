@@ -1,5 +1,5 @@
 
 
   $(document).on('click', '#log', function(){
-    window.location.href=("/WebProyect/app/grafica.php");
+    window.location.href=("/WebProject/app/grafica.php");
   })

@@ -231,3 +231,10 @@ function searchInput() {
       window.location.href = '/WebProject/app/certificado_jurado.php'
     }
   });
+
+  $(document).on('click', '#estadistica', function (e) {
+    e.preventDefault();
+
+      window.location.href = '/WebProject/app/grafica.php'
+
+  });

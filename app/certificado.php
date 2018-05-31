@@ -26,7 +26,7 @@
 
     <div id="botones">
           <button class="certif_btn" id="btnCorreo">Enviar al correo</button>
-          <button class="cerrarS" id="cerrasS">cerrar sesion</button>
+          <button class="cerrarS" id="btncerrar" >cerrar sesion</button>
         </div>
 </body>
 
