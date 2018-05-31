@@ -18,6 +18,9 @@
     
     print_r(json_encode($res));
 
+    session_start();
+    $_SESSION['usuario']=$res;
+
 
 
     
