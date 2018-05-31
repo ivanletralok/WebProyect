@@ -40,13 +40,14 @@ $(document).ready(function () {
           console.log(seleccionados);
           if (cantidad == 4) {
             $.post('setVotos.php', { datos: [seleccionados, mesa] }, function (datos) {
-              console.log(datos);      
+              console.log(datos);
+              window.location.href = '/WebProject/app/certificado.php'
+
             });
-            window.location.href = '/illuminate1/app/certificado.php'
           }
           swal("Poof! Voto Exitoso!", {
             icon: "success",
-            
+
           });
 
           $('.modal').modal('close');
@@ -153,7 +154,7 @@ $(document).ready(function () {
     correo();
   });
 
-  
+
 
   // document.addEventListener('keydown', function (e) {
   //   e.preventDefault();

@@ -28,18 +28,18 @@ $(document).on('click', '.editarIcon', function () {
   $('#estadoNuevoLabel').addClass('active')
 
   /* closest = buscar  find = mas cercano */
-  
+
   var pk5 = $(this).closest('tr').find('#estado').html();
   var pk6 = $(this).closest('tr').find('#idColumn').html();
 
- 
+
   $('input[name="estadoNuevo"]').val(pk5);
   $('input[name="idDB"]').val(pk6);
 })
 
 $(document).on('click', '#botonEditar', function () {
 
-  
+
   var estadoNuevo = $('input[name="estadoNuevo"]').val();
   var idDB =  $('input[name="idDB"]').val();
 
@@ -63,7 +63,7 @@ console.log(dataToSend)
 ///////////////////////////////////////////////////////////////////////////////////////
 
 /*
-* 
+*
 * Eliminar
 *
 */
@@ -89,7 +89,7 @@ $(document).on('click', '.borrarIcon', function () {
       })
       swal("Poof! Eliminado Con Exito", {
         icon: "success",
-        
+
       });
     } else {
       swal("Ha Cancelado la Eliminacion");
@@ -119,7 +119,7 @@ $(document).on('click', '#InsertDato', function () {
   var TipoUsuario= $('input[name="TipoUsuario"]').val();
   var id_programa = $('input[name="id_programa"]').val();
   var id_Mesa = $('input[name="id_Mesa"]').val();
-  
+
   var dataToSend = {
     codigo:codigo,
     primerNom:primerNom,
@@ -140,7 +140,7 @@ $(document).on('click', '#InsertDato', function () {
     data: dataToSend,
     success : function(){
       updateTable();
-      
+
       var codigo = $('input[name="codigo"]').val("");
       var primerNom = $('input[name="primerNom"]').val("");
       var segundoNom = $('input[name="segundoNom"]').val("");
@@ -154,11 +154,11 @@ $(document).on('click', '#InsertDato', function () {
       var id_programa = $('input[name="id_programa"]').val("");
       var id_Mesa = $('input[name="id_Mesa"]').val("");
       swal("Guarado con exito", "", "success");
-      
+
     }
   })
-  
-  
+
+
 
 
 
@@ -197,7 +197,7 @@ function searchInput() {
 
 
 
-  //CERRAR sessionStorage 
+  //CERRAR sessionStorage
 
   $(document).on('click','.cerrarS',function(){
     window.localStorage.removeItem('user');
@@ -206,7 +206,7 @@ function searchInput() {
 
 
   // $(document).on('click','#estado5',function(){
-   
+
   //   let suma = 0;
   //   console.log(suma)
 
@@ -218,7 +218,7 @@ function searchInput() {
   //      updateTable();
   //    }
   //  })
-   
+
   // })
 
 
@@ -228,6 +228,6 @@ function searchInput() {
     $('input[name="estado"]').val(esta);
     console.log(esta)
     if(esta == 4){
-      window.location.href = '/illuminate1/app/certificado_jurado.php'
+      window.location.href = '/WebProject/app/certificado_jurado.php'
     }
   });

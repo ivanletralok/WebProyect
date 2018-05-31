@@ -18,7 +18,7 @@ nav{
 
 #botonEditar {
     margin-left: 150px;
-    
+
 }
 
 #tableData {
@@ -87,6 +87,18 @@ button {
     /*para que el input no se salga del margin*/
     border: 1px solid #ccc;
     background: #e4e1e8;
+}
+
+#seleccionar{
+  font-size: 20px;
+  height: 35px;
+  width: 300px;
+}
+
+
+
+.modal-content{
+  background-color: black;
 }
 
 input:focus {
@@ -191,9 +203,14 @@ table.highlight {
 .candidat{
 
     border: 1px solid black;
-    height: 157px;
+    height: 250px;
     width: 32%;
     display: inline-flex;
+}
+
+.candidat>img{
+  width: 100%;
+  height: 100%;
 }
 
 .candidatoSeleccionado{
