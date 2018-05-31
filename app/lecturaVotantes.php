@@ -11,7 +11,7 @@
             session_start();
           $usuarios = usuario::join('estado_usuario',
           'usuario.id_estado_usuario', '=', 'estado_usuario.id_estado_usuario')
-           ->where('usuario.id_rol','=','V')->get();
+           ->where('usuario.id_rol','=','V')->where('id_mesa','=',$_SESSION['usuario']->id_mesa)->get();
 
         $mesa = mesa::where('id_mesa','=',$_SESSION['usuario']->id_mesa)->first();
         $lugar = lugar::where('id_lugar','=',$mesa->id_lugar)->first();

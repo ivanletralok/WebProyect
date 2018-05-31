@@ -26,6 +26,7 @@
 
     <div id="botones">
           <button class="certif_btn" id="btnCorreo">Enviar al correo</button>
+          <button class="cerrarS">cerrar sesion</button>
         </div>
 </body>
 
@@ -33,5 +34,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="js/tarjeto.js"></script>
+<script src="js/event.js"></script>
 
 </html>

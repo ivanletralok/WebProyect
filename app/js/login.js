@@ -33,7 +33,7 @@ $(document).ready(function(){
     
           }
         }else{
-          alert('datos incorrectos');
+          swal('datos incorrectos');
         }
       }
     })
