@@ -52,6 +52,8 @@ $(document).ready(function () {
           swal("Votacion Cancelada!");
         }
       });
+
+      window.location.href= ("certificado.php");
   });
 
   $('#consejoS').on('click', function () {
@@ -169,7 +171,7 @@ function correo() {
   let mes = fecha.getMonth() + 1;
   let dia = fecha.getDate();
   fecha = anio + "/" + mes + "/" + dia;
-  // emailjs.send(idServicio, idTemplate, 
+  // emailjs.send(idServicio, idTemplate,
   //   {
   //     cedula:usuario.codigo,
   //     nombre:usuario.nombre1 + " " + usuario.nombre2,
@@ -203,7 +205,7 @@ function imprimir() {
 
 function certificado() {
   let usuario = $.parseJSON(window.localStorage.getItem('user'));
-  console.log(usuario);   
+  console.log(usuario);
   let cedula = $("#cedula");
   let nombre = $("#nombre");
   let apellido = $("#apellido");
@@ -213,4 +215,3 @@ function certificado() {
   apellido.text(usuario.apellido1 + " " + usuario.apellido2);
   mesa.text(usuario.id_mesa);
 }
-
