@@ -1,3 +1,53 @@
+<?php
+            require_once '../vendor/autoload.php';
+            require_once 'models/usuario.php';
+            require_once 'database/database.php';
+            require 'models/rol.php';
+            /*$us = array('nombre '=>'alex','edad'=>'25');
+            d($us);*/
+
+            $usuarios = usuario::join('estado_usuario',
+            'usuario.id_estado_usuario', '=', 'estado_usuario.id_estado_usuario')
+            ->where('usuario.id_rol','=','V')->get();
+
+
+            echo '<table id="tabless" class="highlight  centered"';
+            echo '<tr>
+                    <th>CODIGO</th>
+                    <th>PRIMER NOMBRE</th>
+                    <th>SEGUNDO NOMBRE</th>
+                    <th>PRIMER APELLIDO</th>
+                    <th>SEGUNDO APELLIDO</th>
+                    <th>ESTADO </th>
+                    <th>NUMERO DE MESA</th>
+                    <th>ACCIONES</th>
+                    </tr>';
+                
+
+            foreach($usuarios as $us){
+                echo '<tr>
+                        <td id="idColumn">'.$us['codigo'].'</td>
+                        <td id="nombre1">'.$us['nombre1'].'</td>
+                        <td id="nombre2">'.$us['nombre2'].'</td>
+                        <td id="apellido1">'.$us['apellido1'].'</td>
+                        <td id="apellido2">'.$us['apellido2'].'</td>
+                        <td id="estado">'.$us['nombre'].'</td>
+                        <td id="estado">'.$us['id_mesa'].'</td>
+                        <td>
+                        
+            <a class="modal-trigger" href="#modal2"><i class="material-icons accionesIcons editarIcon ">create</i></a>
+            <i class="material-icons accionesIcons borrarIcon">delete</i>
+            
+            </td>
+                    </tr>';
+            }
+        ?>
+
+
+
+
+insertar 
+
 if (window.localStorage.getItem('user') == undefined) {
   window.location.href = './login/login.php';
 }
@@ -24,31 +74,48 @@ $(document).on('click', '.editarIcon', function () {
 
   $('#modal2').modal('open');
 
-
+  $('#primernombreNuevoLabel').addClass('active')
+  $('#segundonombreNuevoLabel').addClass('active')
+  $('#primerapellidoNuevoLabel').addClass('active')
+  $('#segundoapellidoNuevoLabel').addClass('active')
   $('#estadoNuevoLabel').addClass('active')
 
   /* closest = buscar  find = mas cercano */
-  
+  var pk1 = $(this).closest('tr').find('#nombre1').html();
+  var pk2 = $(this).closest('tr').find('#nombre2').html();
+  var pk3 = $(this).closest('tr').find('#apellido1').html();
+  var pk4 = $(this).closest('tr').find('#apellido2').html();
   var pk5 = $(this).closest('tr').find('#estado').html();
   var pk6 = $(this).closest('tr').find('#idColumn').html();
 
- 
+  
+  $('input[name="primernombreNuevo"]').val(pk1);
+  $('input[name="segundonombreNuevo"]').val(pk2);
+  $('input[name="primerapellidoNuevo"]').val(pk3);
+  $('input[name="segundoapellidoNuevo"]').val(pk4);
   $('input[name="estadoNuevo"]').val(pk5);
   $('input[name="idDB"]').val(pk6);
 })
 
 $(document).on('click', '#botonEditar', function () {
 
-  
+  var primernombreNuevo = $('input[name="primernombreNuevo"]').val();
+  var segundonombreNuevo = $('input[name="segundonombreNuevo"]').val();
+  var primerapellidoNuevo = $('input[name="primerapellidoNuevo"]').val();
+  var segundoapellidoNuevo = $('input[name="segundoapellidoNuevo"]').val();
   var estadoNuevo = $('input[name="estadoNuevo"]').val();
   var idDB =  $('input[name="idDB"]').val();
 
   var dataToSend = {
 
+    primernombreNuevo:primernombreNuevo,
+    segundonombreNuevo:segundonombreNuevo,
+    primerapellidoNuevo:primerapellidoNuevo,
+    segundoapellidoNuevo:segundoapellidoNuevo,
     estadoNuevo:estadoNuevo,
     idDB:idDB,
   }
-console.log(dataToSend)
+
   $.ajax({
     method: 'POST',
     url: '../app/actualizarVotante.php',
@@ -222,12 +289,4 @@ function searchInput() {
   // })
 
 
-  $(document).on('click', '.imprimir', function (e) {
-    e.preventDefault();
-    var esta = $(this).closest('tr').find('#estado').html();
-    $('input[name="estado"]').val(esta);
-    console.log(esta)
-    if(esta == 4){
-      window.location.href = '/illuminate1/app/certificado_jurado.php'
-    }
-  });
+

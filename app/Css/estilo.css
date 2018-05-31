@@ -165,3 +165,6 @@ table.highlight {
     box-shadow: 0px 0px 30px 5px black;
     transform: scale(1.1);
 }
+.imprimir{
+    cursor: pointer;
+}

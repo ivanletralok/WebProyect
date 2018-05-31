@@ -23,10 +23,10 @@
     <body>
         <form  id ="formLogin">
             <a>INGRESAR</a>
-                <input id="user" type="number" value="123456" name="userName" placeholder="&#128221; CÓDIGO" class="us">
+                <input id="user" type="number" name="userName" placeholder="&#128221; CÓDIGO" class="us">
             </label>
             <label for="">
-                <input id="pass"  type="password" value="123456" name="password" placeholder="&#128273; PASSWORD" class="pass" >
+                <input id="pass"  type="password"  name="password" placeholder="&#128273; PASSWORD" class="pass" >
             </label>
             <button id="login" class="btn loginButton"  type="submit">Login</button>
         </form>

@@ -42,9 +42,11 @@ $(document).ready(function () {
             $.post('setVotos.php', { datos: [seleccionados, mesa] }, function (datos) {
               console.log(datos);
             });
+            window.location.href = '/illuminate1/app/certificado.php'
           }
           swal("Poof! Voto Exitoso!", {
             icon: "success",
+            
           });
 
           $('.modal').modal('close');
@@ -152,6 +154,8 @@ $(document).ready(function () {
     correo();
   });
 
+  
+
   // document.addEventListener('keydown', function (e) {
   //   e.preventDefault();
   //   if (e.ctrlKey && e.key === 'p') {
@@ -215,3 +219,8 @@ function certificado() {
   apellido.text(usuario.apellido1 + " " + usuario.apellido2);
   mesa.text(usuario.id_mesa);
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 182e9e45d6d7b682ead4c9dca5687dce8bba05b6

@@ -19,6 +19,8 @@
 
         if($res){
           $data = 1;
+          session_start();
+          $_SESSION['usuario']=$res;
 
         }
     }
@@ -29,7 +31,7 @@
 
 
   
-      session_start();
+      
       if(isset($_SESSION["name"])){
         $_SESSION["name"];
         echo "<p> < a href='login.php'> salir </a></p>";

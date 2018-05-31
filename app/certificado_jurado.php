@@ -25,7 +25,7 @@
     </div>
 
     <div id="botones">
-          <button class="certif_btn" id="btnCorreo">Enviar al correo</button>
+          <button class="certif_btn" id="btnImprimir">Imprimir</button>
         </div>
 </body>
 
