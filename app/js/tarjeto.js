@@ -40,7 +40,7 @@ $(document).ready(function () {
           console.log(seleccionados);
           if (cantidad == 4) {
             $.post('setVotos.php', { datos: [seleccionados, mesa] }, function (datos) {
-              console.log(datos);
+              console.log(datos);      
             });
             window.location.href = '/illuminate1/app/certificado.php'
           }
@@ -55,7 +55,6 @@ $(document).ready(function () {
         }
       });
 
-      window.location.href= ("certificado.php");
   });
 
   $('#consejoS').on('click', function () {
@@ -219,8 +218,3 @@ function certificado() {
   apellido.text(usuario.apellido1 + " " + usuario.apellido2);
   mesa.text(usuario.id_mesa);
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 182e9e45d6d7b682ead4c9dca5687dce8bba05b6
