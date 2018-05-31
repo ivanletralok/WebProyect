@@ -18,11 +18,13 @@ nav{
 
 #botonEditar {
     margin-left: 150px;
+    
 }
 
 #tableData {
     width: 98%;
     margin-left: 2%;
+    font-size: 14px;
 }
 
 
